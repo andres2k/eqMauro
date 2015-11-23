@@ -4,3 +4,4 @@ clonar repositorio (eqMauro)
 crear txt
 subir txt al repositorio
 
+aprobado :p
