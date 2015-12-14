@@ -1,4 +1,3 @@
-(function(){
     var app = angular.module('primerApp', ['ngRoute']);
 
     app.controller('personaController', function($scope){
@@ -8,12 +7,10 @@
     app.config(function($routeProvider) {
         $routeProvider
         .when('/', {
-            templateUrl : 'personas.html',
+            templateUrl : 'templates/personas.html',
             controller  : 'personaController'
         })
         .otherwise({
             redirectTo: '/'
         });
     });
-
-})();

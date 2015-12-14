@@ -53,6 +53,7 @@ ROOT_URLCONF = 'primerApp.urls'
 
 WSGI_APPLICATION = 'primerApp.wsgi.application'
 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
@@ -83,8 +84,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = '/static/templates/index.html'
-
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
@@ -92,4 +91,5 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.BasicAuthentication',
     ),
+    'DEFAULT_FILTER_BACKENDS': ['rest_framework.filters.DjangoFilterBackend']
 }
