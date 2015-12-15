@@ -1,3 +1,7 @@
 <div>
-    <h1> {{ name | uppercase}} </h1>
+ <input ng-model="personaN.nombre"></input>
+ {{nombre}}
+    <div ng-repeat="persona in personas">
+        <a href="#/persona/{{persona.id}}"> {{ persona.nombre | uppercase}} </h1>
+    </div>
 </div>
